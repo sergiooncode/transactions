@@ -145,17 +145,6 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
-name = "django-ddd"
-version = "0.1.10"
-description = "An app for a cleaner Django"
-category = "main"
-optional = false
-python-versions = ">=3.9"
-
-[package.dependencies]
-Django = ">=3.2"
-
-[[package]]
 name = "djangorestframework"
 version = "3.12.4"
 description = "Web APIs for Django, made easy."
@@ -323,7 +312,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "a5d79ad8802fce8351b15ed0a49b40465031ddfd0ae3fc9f12e9121b5e0ca983"
+content-hash = "2076c67c981fc91c96864a63c430370236364dbf11285796b7d4ef902a8f75ce"
 
 [metadata.files]
 asgiref = [
@@ -387,10 +376,6 @@ cwcwidth = [
 django = [
     {file = "Django-4.0-py3-none-any.whl", hash = "sha256:59304646ebc6a77b9b6a59adc67d51ecb03c5e3d63ed1f14c909cdfda84e8010"},
     {file = "Django-4.0.tar.gz", hash = "sha256:d5a8a14da819a8b9237ee4d8c78dfe056ff6e8a7511987be627192225113ee75"},
-]
-django-ddd = [
-    {file = "Django-ddd-0.1.10.tar.gz", hash = "sha256:7ea9b03630daf88a2cc2372bac910e8c9c4a0372d06872e2558e18833f1a25e2"},
-    {file = "Django_ddd-0.1.10-py3-none-any.whl", hash = "sha256:07f1759b7a53e241ff11d21b0cb0f6c1075573d6e2887c887c88c074fc7c5b46"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.12.4-py3-none-any.whl", hash = "sha256:6d1d59f623a5ad0509fe0d6bfe93cbdfe17b8116ebc8eda86d45f6e16e819aaf"},
