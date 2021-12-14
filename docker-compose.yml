@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  transactions-api:
+    image: transactions:latest
+    container_name: transactions-api
+    build:
+      context: .
+      dockerfile: ./deploy/docker/Dockerfile
+    command: >
+      bash /tmp/entrypoint.sh
+    volumes:
+      - ./:/srv/
+    ports:
+      - '8000:8000'
+    restart: on-failure

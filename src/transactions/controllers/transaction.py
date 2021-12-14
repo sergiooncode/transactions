@@ -1,0 +1,7 @@
+from rest_framework_bulk import ListBulkCreateUpdateDestroyAPIView
+
+from transactions.serializers.transaction import TransactionSerializer
+
+
+class TransactionListBulkCreateController(ListBulkCreateUpdateDestroyAPIView):
+    serializer_class = TransactionSerializer
