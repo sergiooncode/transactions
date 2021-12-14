@@ -5,5 +5,4 @@ from users.serializers.create_user import UserCreateSerializer
 
 
 class UserCreateController(generics.CreateAPIView):
-    queryset = User.objects.all()
     serializer_class = UserCreateSerializer
