@@ -9,7 +9,7 @@ class AccountSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Account
-        fields = ("account_number",1 "username")
+        fields = ("account_number", "username")
 
     def validate(self, attrs):
         account_number = attrs["account_number"]
