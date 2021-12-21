@@ -8,7 +8,11 @@ class TestUserCreateController(APITestCase):
     def setUp(self) -> None:
         self.client = APIClient()
 
-    def test_(self):
+    def test_get_returns_405(self):
+        response = self.client.get("/users/create/")
+        self.assertEqual(405, response.status_code)
+
+    def test_creates_user_successfully(self):
         response = self.client.post(
             "/users/create/",
             data=json.dumps({"name": "Bob Doe", "email": "bob@email.com", "age": "37"}),
