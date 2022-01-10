@@ -30,3 +30,22 @@ class TestUserCreateController(APITestCase):
         self.assertEqual("bob@email.com", users[0].email)
         self.assertEqual(37, users[0].user_profile.age)
         self.assertEqual("Bob Doe", users[0].user_profile.name)
+
+    def test_creates_user_successfully_even_when_no_space_in_name(self):
+        response = self.client.post(
+            "/users/create/",
+            data=json.dumps({"name": "BobDoe", "email": "bob@email.com", "age": "37"}),
+            content_type="application/json",
+        )
+
+        self.assertEqual(201, response.status_code)
+        self.assertEqual(
+            {"email": "bob@email.com", "name": "BobDoe", "age": 37},
+            response.data,
+        )
+        users = User.objects.all()
+        self.assertEqual(1, len(users))
+        self.assertEqual("bobdoe", users[0].username)
+        self.assertEqual("bob@email.com", users[0].email)
+        self.assertEqual(37, users[0].user_profile.age)
+        self.assertEqual("BobDoe", users[0].user_profile.name)

@@ -46,6 +46,7 @@ curl -v http://localhost:8000/summary/bob_doe/category/
 # Development
 - Three apps were created for this project: users, accounts and transactions. The reason for this is to make each app
 self-contained which as a beneficial side-effect makes that the models of each app can evolve independently
+- The package rest_framework_bulk was used for bulk transaction creation
 - Files are formatted using Black.
 
 # Considerations
